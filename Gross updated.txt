@@ -1,0 +1,56 @@
+/*WAP TO COUNT GROSS SALARY OF N EMPLOYEES*/
+#include<iostream>
+#include<conio.h>
+#include<string>
+using namespace std;
+class emp
+{
+	public:
+	long int Age;
+	char name[100],Id[100];
+	double DA,HRA,Salary,Gross;
+};
+ emp obj[1000];
+main()
+{
+	int n,i;
+	cin >>n;
+	cout <<"Enter HRA and DA : ";
+	cin >>obj[i].HRA;
+	cin >>obj[i].DA;
+	for(i=0;i<n;i++)
+	{
+		cout <<"Enter the names,age,Id,salary of "<<n-i<<" "<< "employees : ";
+		cin >>obj[i].name;
+		cin >>obj[i].Id;
+		cin >>obj[i].Age;
+		cin >>obj[i].Salary;
+	}
+	for(i=0;i<n;i++)
+	{
+		cout <<obj[i].name<<" ";
+		cout <<obj[i].Id<<" ";
+		cout <<obj[i].Age<<" ";
+		cout <<obj[i].Salary;
+		cout<<"\n";
+	}
+	cout<<"\n";
+	for(i=0;i<=n;i++)
+	{
+		obj[i].Gross=obj[i].Salary+obj[i].HRA*obj[i].Salary+obj[i].DA*obj[i].Salary;
+	}
+	cout <<"Displaying Total Info : ";
+	cout<<"\n";
+	cout<<"Name "<<"Age "<<"Id "<<"Salary "<<"Gross ";
+	cout<<"\n";
+	for(i=0;i<n;i++)
+	{
+		cout <<obj[i].name<<" ";
+		cout <<obj[i].Id<<" ";
+		cout <<obj[i].Age<<" ";
+		cout <<obj[i].Salary<<" ";
+		cout <<obj[i].Gross;
+		cout<<"\n";
+	}
+	return 0;
+}

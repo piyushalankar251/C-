@@ -1,0 +1,43 @@
+/*WAP TO FIND GROSS SALARY OF EMPLOYEES*/
+#include<iostream>
+using namespace std;
+class Salary
+{
+	public :
+	int Sal;
+	char Name[100],Id[100];
+};
+main()
+{
+	Salary obj1[100];
+	int i,n;
+	cout <<"Enter No of Employees : ";
+	cin >>n;
+	for(i=0;i<n;i++)
+	{
+		cout <<"Enter Salary,Name,Id";
+		cin >>obj1[i].Sal;
+		cin >>obj1[i].Name;
+		cin >>obj1[i].Id;
+	}
+	for(i=0;i<n;i++)
+	{
+		cout <<"\n";
+		cout <<" "<<obj1[i].Sal;
+		cout <<" "<<obj1[i].Name;
+		cout <<" "<<obj1[i].Id;
+	}
+	for(i=0;i<n;i++)
+	{
+		obj1[i].Sal=12*obj1[i].Sal;
+	}
+	cout <<"Employee details with Gross Salary :";
+	for(i=0;i<n;i++)
+	{
+		cout <<"\n";
+		cout <<" "<<obj1[i].Sal;
+		cout <<" "<<obj1[i].Name;
+		cout <<" "<<obj1[i].Id;
+	}
+	return 0;
+}
